@@ -1,4 +1,4 @@
-var lenghart = function() {
+var webmaster = function() {
     var screenHeight = $(window).height();
     var screenWidth = $(window).width();
     $(window).scroll(function(e) {
@@ -457,8 +457,8 @@ var lenghart = function() {
         })
     }
 };
-$(document).ready(lenghart);
-$(window).resize(lenghart);
+$(document).ready(webmaster);
+$(window).resize(webmaster);
 $(document).ready(function() {
     var screenWidth = $(window).width();
     if (screenWidth > 800) {

@@ -225,8 +225,13 @@ header .menu__block nav ul {
     padding: 0;
     list-style: none
 }
+
+header .menu__block nav ul li a:hover {
+    color: #ff6555;
+
+}
 header .menu__block nav ul li.current a {
-    color: #e74c3c;
+    color: #ffd600;
     -webkit-transition: color .5s;
     transition: color .5s
 }
@@ -2113,6 +2118,11 @@ only screen and (min-resolution: 2dppx) {
         left: 50%;
         margin-left: -97.5px
     }
+
+     header .menu__block .brand svg {
+        color: white;
+    }
+
     header .menu__block nav {
         display: none
     }
