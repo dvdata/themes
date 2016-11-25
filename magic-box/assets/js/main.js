@@ -916,3 +916,35 @@ $(window).resize(function() {
 if ($('#mobileVisible').css('display') == ('block')) { //MOBILE
     $('#premios').fadeOut();
 }
+
+function validacao(campo) {
+    $.post('assets/php/email.php', {
+            nome: $('#nome').val(),
+            email: $('#email').val(),
+            assunto: $('#assunto').val(),
+            mensagem: $('#mensagem').val(),
+            captcha: $('#captcha').val(),
+
+            campo: campo,
+            lang: 'en'
+        },
+        function(response) {
+            //alert(response);
+            var json = jQuery.parseJSON(response);
+            var total_erros = 0;
+            for (var i in json.error) {
+                $('#' + i).parent().removeClass('error');
+                if (json.error[i] == '1') {
+                    total_erros++;
+                    $('#' + i).parent().addClass('error');
+                }
+            }
+            if (!campo != '' && !campo != 'undifined' && total_erros < 1) {
+                //$("#form").submit();
+                if (json.sucesso == 1) {
+                    contactFormMensage();
+                    $("#form input[type=text]").val("");
+                }
+            }
+        });
+}
