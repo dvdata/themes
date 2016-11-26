@@ -4331,7 +4331,7 @@ header .languagesMobile .listLanguagesMobile li a span {
 }
 @media screen and (max-width: 1200px) {
     #sector-about .container_text .text.first {
-        margin-left: 26.13636%;
+        margin-left: 10%;
     }
 }
 #sector-about .container_signature {
