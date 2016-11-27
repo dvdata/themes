@@ -1626,7 +1626,7 @@ header #menuMobile li a .bar .line {
 }
 header #menuMobile li a .text {
     font-family: 'Oxygen-Regular';
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     color: #b07c57;
     text-transform: uppercase;
@@ -1876,9 +1876,9 @@ header .languagesMobile .listLanguagesMobile li a span {
 }
 #main_menu li a .text {
     font-family: 'Oxygen-Regular';
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
-    color: #838383;
+    color: #FFF;
     text-transform: uppercase;
     opacity: .3;
     margin-left: 15px;

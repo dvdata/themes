@@ -28,8 +28,8 @@ function animationMouse() {
         var j = a * g * -1 + 25;
         $(".imageAnimatedBack").css({
             "background-position": f + "px " + j + "px"
-        })
-    })
+        });
+    });
 }
 $.fn.sparallax = function(a) {
     var d = $(window),
@@ -50,16 +50,16 @@ $.fn.sparallax = function(a) {
             j = -(d.scrollTop() / h);
             e.css({
                 top: j + "px"
-            })
-        })
-    })
+            });
+        });
+    });
 };
 
 function resizeSliderPortfolio() {
     var b = 1903,
         a = 950,
         c = $("#portfolioGallery").width();
-    var d = parseInt(c * a / b);
+    var d = parseInt(c * a / b,10);
     if ($("#mobileVisible").css("display") == ("block")) {
         ulHeight = $("#imagesPortfolio").css({
             height: d
@@ -67,11 +67,11 @@ function resizeSliderPortfolio() {
         if (d + 60 > 260) {
             $("#portfolioGallery .informations").css("margin-top", d + 60 + "px");
             $("#portfolioGallery .nextImage, #portfolioGallery .previousImage").css("top", d + 90);
-            $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").height(d)
+            $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").height(d);
         } else {
             $("#portfolioGallery .informations").css("margin-top", "260px");
             $("#portfolioGallery .nextImage, #portfolioGallery .previousImage").css("top", "290px");
-            $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").height("200px")
+            $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").height("200px");
         }
     }
 }
@@ -88,21 +88,21 @@ function sectorVisible() {
                 c.removeClass("selected");
                 b.removeClass("visible");
                 $(this).addClass("visible");
-                c.find('a[href="#' + $(this).attr("id") + '"]').parent().addClass("selected")
+                c.find('a[href="#' + $(this).attr("id") + '"]').parent().addClass("selected");
             }
         });
         var a = $(window).scrollTop();
         if (a > 69) {
-            $("header").addClass("sticky")
+            $("header").addClass("sticky");
         } else {
-            $("header").removeClass("sticky")
+            $("header").removeClass("sticky");
         }
         if (!$("#sector-process").hasClass("visible")) {
             $(".limit").stop().animate({
                 height: "36px"
             }, 200, function() {
-                $("#sector-process a.area").removeClass("open")
-            })
+                $("#sector-process a.area").removeClass("open");
+            });
         }
     }
 }
@@ -110,8 +110,8 @@ function sectorVisible() {
 function contactFormMensage() {
     $("#contactForm .msg").fadeIn(300);
     setTimeout(function() {
-        $("#contactForm .msg").fadeOut(200)
-    }, 2500)
+        $("#contactForm .msg").fadeOut(200);
+    }, 2500);
 }
 
 function detectIE() {
@@ -121,12 +121,12 @@ function detectIE() {
     var b = c.indexOf("Trident/");
     var e = c.indexOf("Edge/");
     if ((a > -1) || (b > -1) || (e > -1)) {
-        d = true
+        d = true;
     }
     if (d) {
         $("#portfolioGallery .nextImage, #portfolioGallery .previousImage, #storiesGallery .gallery #thousandStories .owl-nav .owl-next, #storiesGallery .gallery #thousandStories .owl-nav .owl-prev").css("cursor", "pointer");
         $("#portfolioGallery .imagesPortfolio").css("cursor", "crosshair");
-        $("#storiesGallery .gallery #thousandStories").css("cursor", "e-resize")
+        $("#storiesGallery .gallery #thousandStories").css("cursor", "e-resize");
     }
 }
 $(document).ready(function() {
@@ -136,12 +136,12 @@ $(document).ready(function() {
     });
     if ($("#mobileVisible").css("display") == ("none")) {
         animationMouse();
-        $(".parallax").sparallax()
+        $(".parallax").sparallax();
     } else {
-        $(".languagesMobile").css("left", $(window).width())
+        $(".languagesMobile").css("left", $(window).width());
     }
     $("#contactForm .msg").on(function() {
-        $(this).fadeOut(200)
+        $(this).fadeOut(200);
     });
     FastClick.attach(document.body);
     $("#sector-home").height($(window).height());
@@ -149,34 +149,34 @@ $(document).ready(function() {
         if ($("#storiesGallery").hasClass("open")) {
             $("#storiesGallery").removeClass("open").removeAttr("class");
             $("#storiesGallery").fadeOut(200);
-            g()
+            g();
         } else {
             if ($("#introCronology").css("display") == ("none")) {
                 $("#storiesGallery").addClass("open");
                 $("#storiesGallery").fadeIn(400);
                 $("#storiesGallery").find(".intro").addClass("animate").delay(3100).queue(function() {
                     $("#storiesGallery").find(".intro").removeClass("animate");
-                    $(".paginationFake").width($(".paginationFake li").width() * $(".paginationFake li").length + 10)
+                    $(".paginationFake").width($(".paginationFake li").width() * $(".paginationFake li").length + 10);
                 });
                 setTimeout(function() {
                     if ($("#mobileVisible").css("display") == ("none")) {
-                        $("#storiesGallery").find(".intro").hide()
+                        $("#storiesGallery").find(".intro").hide();
                     } else {
-                        $("#storiesGallery").children(".row").remove()
+                        $("#storiesGallery").children(".row").remove();
                     }
                 }, 5200);
                 $("#storiesGallery .gallery").delay(5200).animate({
                     opacity: "1"
-                })
+                });
             } else {
                 $("#introCronology").addClass("visible opening").delay(1100).queue(function(m) {
                     $(this).delay(300).fadeOut(400);
                     $("#storiesGallery").addClass("open");
                     $("#storiesGallery").fadeIn(400);
                     if ($("#mobileVisible").css("display") == ("none")) {
-                        $(".paginationFake li").width($(".containerPagination").width() / 5 + "px")
+                        $(".paginationFake li").width($(".containerPagination").width() / 5 + "px");
                     } else {
-                        $(".paginationFake li").width($(window).width() + "px")
+                        $(".paginationFake li").width($(window).width() + "px");
                     }
                     $("#storiesGallery").find(".intro").addClass("animate").delay(3100).queue(function() {
                         $("#storiesGallery").find(".intro").removeClass("animate");
@@ -189,25 +189,25 @@ $(document).ready(function() {
                             var o = ((100 - q) / 100) * s;
                             p.css({
                                 strokeDashoffset: o
-                            })
-                        })
+                            });
+                        });
                     });
                     setTimeout(function() {
                         if ($("#mobileVisible").css("display") == ("none")) {
-                            $("#storiesGallery").find(".intro").hide()
+                            $("#storiesGallery").find(".intro").hide();
                         } else {
-                            $("#storiesGallery").children(".row").remove()
+                            $("#storiesGallery").children(".row").remove();
                         }
                     }, 5200);
                     $("#storiesGallery .gallery").delay(5200).animate({
                         opacity: "1"
                     });
                     $(".containerPagination").height($(".paginationFake li").outerHeight());
-                    m()
-                })
+                    m();
+                });
             }
         }
-        return false
+      return false;
     });
     var b = $("#thousandStories");
     var d = 0;
@@ -227,7 +227,7 @@ $(document).ready(function() {
                     left: "50%",
                     transform: "translateX(-50%)",
                     "-webkit-transform": "translateX(-50%)"
-                })
+                });
             }
         },
         onResize: function() {
@@ -239,7 +239,7 @@ $(document).ready(function() {
                         left: "50%",
                         transform: "translateX(-50%)",
                         "-webkit-transform": "translateX(-50%)"
-                    })
+                    });
                 }
             } else {
                 $(".paginationFake li").width($(window).width() + "px");
@@ -248,7 +248,7 @@ $(document).ready(function() {
                     left: "inherit",
                     transform: "none",
                     "-webkit-transform": "none"
-                })
+                });
             }
         }
     });
@@ -261,7 +261,7 @@ $(document).ready(function() {
                 left: "50%",
                 transform: "translateX(-50%)",
                 "-webkit-transform": "translateX(-50%)"
-            })
+            });
         } else {
             $(".paginationFake").animate({
                 left: "0"
@@ -575,7 +575,7 @@ $(document).ready(function() {
                     easing: "swing",
                     duration: 300,
                     done: function() {
-                        leftUL = parseInt(ul.css("left"))
+                        leftUL = parseInt(ul.css("left")),10
                     }
                 });
                 i = 0
@@ -593,7 +593,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left"));
+                                leftUL = parseInt(ul.css("left")),10;
                                 i++
                             }
                         })
@@ -604,7 +604,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left"))
+                                leftUL = parseInt(ul.css("left")),10
                             }
                         })
                     }
@@ -615,7 +615,7 @@ $(document).ready(function() {
                         easing: "easeOutExpo",
                         duration: 400,
                         done: function() {
-                            leftUL = parseInt(ul.css("left"))
+                            leftUL = parseInt(ul.css("left")),10
                         }
                     })
                 }
@@ -633,7 +633,7 @@ $(document).ready(function() {
                         easing: "swing",
                         duration: 300,
                         done: function() {
-                            leftUL = parseInt(ul.css("left"))
+                            leftUL = parseInt(ul.css("left")),10
                         }
                     })
                 }
@@ -650,7 +650,7 @@ $(document).ready(function() {
                     easing: "swing",
                     duration: 300,
                     done: function() {
-                        leftUL = parseInt(ul.css("left"))
+                        leftUL = parseInt(ul.css("left")),10
                     }
                 });
                 i = 0
@@ -669,7 +669,7 @@ $(document).ready(function() {
                             duration: 400,
                             done: function() {
                                 leftUL = parseInt(ul.css("left"));
-                                i++
+                                i++,10
                             }
                         })
                     } else {
@@ -679,7 +679,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left"))
+                                leftUL = parseInt(ul.css("left")),10
                             }
                         })
                     }
@@ -690,7 +690,7 @@ $(document).ready(function() {
                         easing: "easeOutExpo",
                         duration: 400,
                         done: function() {
-                            leftUL = parseInt(ul.css("left"))
+                            leftUL = parseInt(ul.css("left")),10
                         }
                     })
                 }
@@ -708,7 +708,7 @@ $(document).ready(function() {
                         easing: "swing",
                         duration: 300,
                         done: function() {
-                            leftUL = parseInt(ul.css("left"))
+                            leftUL = parseInt(ul.css("left")),10
                         }
                     })
                 }
@@ -900,7 +900,7 @@ $(window).resize(function() {
     liWidth = $("#portfolioGallery .imagesPortfolio li").width($(window).width());
     ulWidth = $("#portfolioGallery .imagesPortfolio").width($(window).width() * $("#portfolioGallery .imagesPortfolio li").length);
     ulHeight = $("#portfolioGallery .imagesPortfolio").height($(window).height());
-    leftUL = parseInt(ul.css("left", -(indexLiActive * $("#imagesPortfolio li").width())));
+    leftUL = parseInt(ul.css("left", -(indexLiActive * $("#imagesPortfolio li").width())),10);
     if ($("#mobileVisible").css("display") == ("none")) {
         $(".paginationFake li").width($(".containerPagination").width() / 5 + "px");
         $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").removeAttr("style")
