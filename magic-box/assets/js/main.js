@@ -59,7 +59,7 @@ function resizeSliderPortfolio() {
     var b = 1903,
         a = 950,
         c = $("#portfolioGallery").width();
-    var d = parseInt(c * a / b,10);
+    var d = parseFloat(c * a / b,10);
     if ($("#mobileVisible").css("display") == ("block")) {
         ulHeight = $("#imagesPortfolio").css({
             height: d
@@ -290,14 +290,14 @@ $(document).ready(function() {
             if ($("#mobileVisible").css("display") == ("none")) {
                 if (item > 3 && item < totalItems) {
                     $(".paginationFake").stop(true, true).animate({
-                        left: (parseInt($(".paginationFake").css("left")) - $(".paginationFake li").width())
+                        left: (parseFloat($(".paginationFake").css("left")) - $(".paginationFake li").width())
                     }, 750);
                     d++
                 }
             } else {
                 if (item <= totalItems) {
                     $(".paginationFake").stop(true, true).animate({
-                        left: (parseInt($(".paginationFake").css("left")) - $(".paginationFake li").width())
+                        left: (parseFloat($(".paginationFake").css("left")) - $(".paginationFake li").width())
                     }, 750);
                     d++
                 }
@@ -306,14 +306,14 @@ $(document).ready(function() {
             if ($("#mobileVisible").css("display") == ("none")) {
                 if (item == d && d > 0) {
                     $(".paginationFake").stop(true, true).animate({
-                        left: (parseInt($(".paginationFake").css("left")) + $(".paginationFake li").width())
+                        left: (parseFloat($(".paginationFake").css("left")) + $(".paginationFake li").width())
                     }, 750);
                     d--
                 }
             } else {
                 if (d > 0) {
                     $(".paginationFake").stop(true, true).animate({
-                        left: (parseInt($(".paginationFake").css("left")) + $(".paginationFake li").width())
+                        left: (parseFloat($(".paginationFake").css("left")) + $(".paginationFake li").width())
                     }, 750);
                     d--
                 }
@@ -575,7 +575,7 @@ $(document).ready(function() {
                     easing: "swing",
                     duration: 300,
                     done: function() {
-                        leftUL = parseInt(ul.css("left")),10
+                        leftUL = parseFloat(ul.css("left")),10
                     }
                 });
                 i = 0
@@ -593,7 +593,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left")),10;
+                                leftUL = parseFloat(ul.css("left")),10;
                                 i++
                             }
                         })
@@ -604,7 +604,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left")),10
+                                leftUL = parseFloat(ul.css("left")),10
                             }
                         })
                     }
@@ -615,7 +615,7 @@ $(document).ready(function() {
                         easing: "easeOutExpo",
                         duration: 400,
                         done: function() {
-                            leftUL = parseInt(ul.css("left")),10
+                            leftUL = parseFloat(ul.css("left")),10
                         }
                     })
                 }
@@ -633,7 +633,7 @@ $(document).ready(function() {
                         easing: "swing",
                         duration: 300,
                         done: function() {
-                            leftUL = parseInt(ul.css("left")),10
+                            leftUL = parseFloat(ul.css("left")),10
                         }
                     })
                 }
@@ -650,7 +650,7 @@ $(document).ready(function() {
                     easing: "swing",
                     duration: 300,
                     done: function() {
-                        leftUL = parseInt(ul.css("left")),10
+                        leftUL = parseFloat(ul.css("left")),10
                     }
                 });
                 i = 0
@@ -668,7 +668,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left"));
+                                leftUL = parseFloat(ul.css("left"));
                                 i++,10
                             }
                         })
@@ -679,7 +679,7 @@ $(document).ready(function() {
                             easing: "easeOutExpo",
                             duration: 400,
                             done: function() {
-                                leftUL = parseInt(ul.css("left")),10
+                                leftUL = parseFloat(ul.css("left")),10
                             }
                         })
                     }
@@ -690,7 +690,7 @@ $(document).ready(function() {
                         easing: "easeOutExpo",
                         duration: 400,
                         done: function() {
-                            leftUL = parseInt(ul.css("left")),10
+                            leftUL = parseFloat(ul.css("left")),10
                         }
                     })
                 }
@@ -708,7 +708,7 @@ $(document).ready(function() {
                         easing: "swing",
                         duration: 300,
                         done: function() {
-                            leftUL = parseInt(ul.css("left")),10
+                            leftUL = parseFloat(ul.css("left")),10
                         }
                     })
                 }
@@ -900,7 +900,7 @@ $(window).resize(function() {
     liWidth = $("#portfolioGallery .imagesPortfolio li").width($(window).width());
     ulWidth = $("#portfolioGallery .imagesPortfolio").width($(window).width() * $("#portfolioGallery .imagesPortfolio li").length);
     ulHeight = $("#portfolioGallery .imagesPortfolio").height($(window).height());
-    leftUL = parseInt(ul.css("left", -(indexLiActive * $("#imagesPortfolio li").width())),10);
+    leftUL = parseFloat(ul.css("left", -(indexLiActive * $("#imagesPortfolio li").width())),10);
     if ($("#mobileVisible").css("display") == ("none")) {
         $(".paginationFake li").width($(".containerPagination").width() / 5 + "px");
         $("#portfolioGallery .lineLeft, #portfolioGallery .lineRight").removeAttr("style")
@@ -908,7 +908,7 @@ $(window).resize(function() {
         $(".paginationFake li").width($(window).width() + "px");
         $(".paginationFake").width($(".paginationFake li").width() * $(".paginationFake li").length);
         if (!$(".paginationFake li.active").index() == 0) {
-            $(".paginationFake").css("left", parseInt((-$(".paginationFake li").width()) * ($(".paginationFake li.active").index() - 1)))
+            $(".paginationFake").css("left", parseFloat((-$(".paginationFake li").width()) * ($(".paginationFake li.active").index() - 1)))
         }
         $(".languagesMobile").css("left", $(window).width());
         resizeSliderPortfolio()
