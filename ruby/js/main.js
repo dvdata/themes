@@ -3,7 +3,7 @@ var errmsg = '<div class="error-info animated fadeInUp"> <span><span>O</span>ops
 var msg1 = "Please fill in all required fields";
 var msg2 = "Please wait. Processing";
 var msg3 = "Your e-mail has been successfully sent. Thank You!";
-var msg4 = "Failed to send your message. Please try later or contact me directly your@email.com.";
+var msg4 = "Failed to send your message. Please try later or contact me directly jeznacki13@gmail.com.";
 var msg5 = "Some text here...";
 var msg6 = "Some text here two...";
 var msg7 = "Double click to add more elements.";
