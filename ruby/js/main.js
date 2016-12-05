@@ -57,7 +57,7 @@ app.ui = {
 
             app.ajax = $.ajax({
                 type: 'POST',
-                url: url
+               
 
             });
 
