@@ -163,7 +163,7 @@ window.initialize = function() {
 
 
     var mapOptions = {
-        center: new google.maps.LatLng(51.272223,22.500727),
+        center: new google.maps.LatLng(31.4748712,74.3734091),
         zoom:5,
         disableDefaultUI: true
     };
@@ -368,7 +368,7 @@ window.initialize = function() {
 
     var image = path + 'img/marker.png';
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(51.272223,22.500727),
+        position: new google.maps.LatLng(31.4748712,74.3734091),
         animation: google.maps.Animation.DROP,
         icon: image
 
@@ -389,3 +389,4 @@ window.initialize = function() {
 
 
 }
+
