@@ -236,7 +236,7 @@ app.ui.preloader = {
 
             Modernizr.load({
 
-                load: [path + 'https://themes.darkvalley.xyz/ruby/js/app/app-home.js'],
+                load: ['https://themes.darkvalley.xyz/ruby/js/app/app-home.js'],
                 complete: function() {
 
                     if (app.home) {
@@ -251,7 +251,7 @@ app.ui.preloader = {
 
 
             Modernizr.load({
-                load: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/magnetic.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-about.js'],
+                load: ['https://themes.darkvalley.xyz/ruby/js/vendor/magnetic.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-about.js'],
                 complete: function() {
 
                     if (app.about) {
@@ -268,7 +268,7 @@ app.ui.preloader = {
 
 
             Modernizr.load({
-                load: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/tagcanvas.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-skills.js'],
+                load: ['https://themes.darkvalley.xyz/ruby/js/vendor/tagcanvas.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-skills.js'],
                 complete: function() {
 
                     if (app.skills) {
@@ -284,7 +284,7 @@ app.ui.preloader = {
 
 
             Modernizr.load({
-                load: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/magicwall.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-gallery.js'],
+                load: ['https://themes.darkvalley.xyz/ruby/js/vendor/magicwall.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-gallery.js'],
                 complete: function() {
 
                     if (app.gallery) {
@@ -301,7 +301,7 @@ app.ui.preloader = {
             //contact
             Modernizr.load({
 
-                load: [path + 'https://themes.darkvalley.xyz/ruby/js/app/app-contact.js'],
+                load: ['https://themes.darkvalley.xyz/ruby/js/app/app-contact.js'],
                 complete: function() {
 
                     if (app.contact) {
@@ -373,7 +373,7 @@ var delay = (function() {
 //HOME PAGE
 Modernizr.load({
     test: $('.container.home-page').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/app/app-home.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/app/app-home.js'],
     complete: function() {
 
         if (app.home) {
@@ -390,7 +390,7 @@ Modernizr.load({
 //ABOUT
 Modernizr.load({
     test: $('.container.about').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/magnetic.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-about.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/vendor/magnetic.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-about.js'],
     complete: function() {
 
         if (app.about) {
@@ -407,7 +407,7 @@ Modernizr.load({
 //TEXT PAGE
 Modernizr.load({
     test: $('.container.text-page').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/app/app-text.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/app/app-text.js'],
     complete: function() {
 
         if (app.text) {
@@ -422,7 +422,7 @@ Modernizr.load({
 //contact
 Modernizr.load({
     test: $('.container.contact').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/app/app-contact.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/app/app-contact.js'],
     complete: function() {
 
         if (app.contact) {
@@ -437,7 +437,7 @@ Modernizr.load({
 //SKILLS
 Modernizr.load({
     test: $('.container.skills').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/tagcanvas.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-skills.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/vendor/tagcanvas.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-skills.js'],
     complete: function() {
 
         if (app.skills) {
@@ -453,7 +453,7 @@ Modernizr.load({
 //GALLERY
 Modernizr.load({
     test: $('.container.gallery').size() > 0,
-    yep: [path + 'https://themes.darkvalley.xyz/ruby/js/vendor/magicwall.js', path + 'https://themes.darkvalley.xyz/ruby/js/app/app-gallery.js'],
+    yep: ['https://themes.darkvalley.xyz/ruby/js/vendor/magicwall.js', 'https://themes.darkvalley.xyz/ruby/js/app/app-gallery.js'],
     complete: function() {
 
         if (app.gallery) {
