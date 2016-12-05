@@ -44,45 +44,7 @@ app.ui = {
 
 
     },
-    pageLoad: function(url, rel) {
-
-
-        if (app.ajax !== null) {
-
-            return false;
-
-        } else {
-
-            app.ui.preloader.preloaderInit(rel);
-
-            app.ajax = $.ajax({
-                type: 'POST',
-                url: url
-
-            });
-
-
-            app.ajax.done(function(msg) {
-
-                var cont = $(msg).filter("#page");
-                var cnt = cont.contents();
-                $("#page").html(cnt);
-
-                app.ajax = null;
-            });
-
-            app.ajax.fail(function(jqXHR, textStatus) {
-
-                $("#page").html(errmsg);
-
-            });
-
-            return true;
-
-        }
-
-
-    },
+    
     particle: false,
     particles: function() {
 
