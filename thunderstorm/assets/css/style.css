@@ -3865,7 +3865,7 @@ figure.effect-lily img {
         line-height: 32px;
     }
     .homeTextDva {
-        font-size: 16px;
+        font-size: 27px;
         line-height: 120%;
     }
     .homeSayHelloContainer {
@@ -3914,6 +3914,29 @@ figure.effect-lily img {
         display: inline;
     }
 }
+
+@media (min-width: 0px) and (max-width: 835px) {
+
+
+.visitBtn {
+    padding: 16px 14px 14px 22px;
+    color: #000;
+    border: 2px solid #000;
+    font-family: 'nexa_boldregular';
+    font-size: 8px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: none;
+}
+.visitBtn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+}
+
+
 @media (min-width: 0px) and (max-width: 768px) {
     .homeLevo {
         width: 100%;
@@ -3973,4 +3996,18 @@ figure.effect-lily img {
         -ms-transform: scale(1);
         /* IE 9 */
     }
+}
+
+@media (min-width: 0px) and (max-width: 1120px) {
+
+
+.profileTextDva {
+    font-family: 'proxima_novalight';
+    font-size: 18px;
+    line-height: 27px;
+    color: #767676;
+    text-align: left;
+    display: none;
+}
+
 }
