@@ -213,46 +213,7 @@ jQuery(function($) {
                     helloSlider.destroySlider();
                 });
             }
-            /* Slider Roomz iPhone JS Begin */
-            var sliderRISketch = $('.slider-ri-sketch').bxSlider({
-                speed: 1000, // Slide transition duration (in ms)
-                slideMargin: 10,
-                easing: 'ease',
-                responsive: false,
-                preloadImages: 'all',
-                pager: false,
-                controls: false,
-                auto: true,
-                pause: 1500, // The amount of time (in ms) between each auto transition
-                // autoDirection: 'prev',
-                minSlides: 1,
-                maxSlides: 9,
-                moveSlides: 1,
-                slideWidth: 270,
-                onSlidePrev: function() {
-                    sliderRIReal.goToPrevSlide();
-                },
-                onSlideNext: function() {
-                    sliderRIReal.goToNextSlide();
-                }
-            });
-
-            var sliderRIReal = $('.slider-ri-real').bxSlider({
-                speed: 1000, // Slide transition duration (in ms)
-                easing: 'ease',
-                responsive: false,
-                preloadImages: 'all',
-                pager: false,
-                controls: false,
-                pause: 1500, // The amount of time (in ms) between each auto transition
-                // autoDirection: 'prev',
-                // onSlidePrev: function() {
-                //     sliderRISketch.goToPrevSlide();
-                // },
-                // onSlideNext: function() {
-                //     sliderRISketch.goToNextSlide();
-                // }
-            });
+            
 
             /* Slider Kiss Menu Android JS Begin */
             $('.slider-kma').bxSlider({

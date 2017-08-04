@@ -4011,3 +4011,26 @@ figure.effect-lily img {
 }
 
 }
+
+@media (min-width: 0px) and (max-width: 1269px) {
+
+.visitBtn {
+
+    display: none;
+}
+}
+
+@media (min-width: 0px) and (max-width: 1010px) {
+
+#bottom-text {
+    font-size: 12px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 830px) {
+
+#bottom-text {
+    display: none;
+}
+}
+

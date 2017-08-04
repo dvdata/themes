@@ -86,24 +86,7 @@
          
     }
     
-    if ( platform === 'MacIntel' || platform === 'MacPPC' ) {
-        os = 'Mac OS X';
-        osversion = /10[\.\_\d]+/.exec(ua)[0];
-        if ( /[\_]/.test(osversion) ) {
-            osversion = osversion.split('_').join('.');
-        }
-    } else if ( platform === 'CrOS' ) {
-        os = 'ChromeOS';
-    } else if ( platform === 'Win32' || platform == 'Win64' ) {
-        os = 'Windows';
-        bit = platform.replace(/[^0-9]+/,'');
-    } else if ( !os && /Android/.test(ua) ) {
-        os = 'Android';
-    } else if ( !os && /Linux/.test(platform) ) {
-        os = 'Linux';
-    } else if ( !os && /Windows/.test(ua) ) {
-        os = 'Windows';
-    }
+
 
     window.ui = {
         browser : browser,
