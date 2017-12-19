@@ -3222,7 +3222,7 @@ a:focus {
     height: 294px;
     top: 0;
     left: 0;
-    color: #ffffff;
+    color: #ffffff9c;
     z-index: 4;
     opacity: 0;
     transition: color 3s
@@ -5450,6 +5450,12 @@ a:focus {
         right: 0;
         font-size: 2vw
     }
+
+    #contact-page-image{
+
+        width: 400px;
+    }
+
 }
 @media (max-width: 750px) {
     .p-who-team-member-post {
